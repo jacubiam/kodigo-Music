@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import AlbumsContext from "../../context/ArtistContext/AlbumsContext";
-import TokenContext from "../../context/TokenContext/TokenContext";
+import AlbumsContext from "../../../../context/AlbumsContext/AlbumsContext";
+import TokenContext from "../../../../context/TokenContext/TokenContext";
 import search from "./search";
 import { useNavigate } from "react-router-dom";
 

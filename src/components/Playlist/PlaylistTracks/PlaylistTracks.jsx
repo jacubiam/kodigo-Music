@@ -1,10 +1,10 @@
-import Track from "../Track/Track";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import getPlaylist from "../../adapters/Playlist/getPlaylist";
-import useToken from "../../adapters/token";
-import TokenContext from "../../context/TokenContext/TokenContext";
-import PlaylistHeader from "../PlaylistHeader/PlaylistHeader";
+import getPlaylist from "../../../adapters/Playlist/getPlaylist";
+import useToken from "../../../adapters/token";
+import TokenContext from "../../../context/TokenContext/TokenContext";
+import Track from "./Track/Track";
+import PlaylistHeader from "./PlaylistHeader/PlaylistHeader";
 
 const PlaylistTracks = () => {
     const { albumID } = useParams();

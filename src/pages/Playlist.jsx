@@ -1,7 +1,7 @@
-import HeaderBanner from '../components/HeaderBanner/HeaderBanner';
-import SearchBar from '../components/SearchBar/SearchBar';
-import PlaylistTracks from "../components/PlaylistTracks/PlaylistTracks";
-import Player from '../components/Player/Player';
+import HeaderBanner from '../components/Commons/Header/HeaderBanner/HeaderBanner';
+import SearchBar from '../components/Commons/Header/SearchBar/SearchBar';
+import PlaylistTracks from '../components/Playlist/PlaylistTracks/PlaylistTracks';
+import Player from '../components/Playlist/Player/Player';
 
 const Playlist = () => {
 

@@ -1,4 +1,4 @@
-import getAlbums from "../../adapters/SearchBar/getAlbums";
+import getAlbums from "../../../../adapters/SearchBar/getAlbums";
 
 const search = async (searchedText, tokenID, setAlbums) => {
     console.log(searchedText);

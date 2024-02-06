@@ -1,10 +1,9 @@
 import { useContext } from "react";
-import AlbumCard from "../AlbumCard/AlbumCard";
-import AlbumsContext from "../../context/ArtistContext/AlbumsContext";
+import AlbumCard from "./AlbumCard/AlbumCard";
+import AlbumsContext from "../../../context/AlbumsContext/AlbumsContext";
 
 const AlbumList = () => {
   const { albums } = useContext(AlbumsContext);
-  console.log(albums);
 
   return (
     <>

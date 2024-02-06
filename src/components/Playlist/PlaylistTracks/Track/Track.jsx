@@ -1,5 +1,5 @@
 import { useContext, useRef } from "react";
-import PlayerContext from "../../context/PlayerContex/PlayerContext";
+import PlayerContext from "../../../../context/PlayerContex/PlayerContext";
 
 const Track = ({ track, image }) => {
   const trackBtn = useRef(null);
@@ -29,7 +29,6 @@ const Track = ({ track, image }) => {
       setPlayer({ ...player, display: "block", artist: track.artists[0].name, track: track.name, src: track.preview_url, full: track.external_urls.spotify, previous: prev, play: true, button: element });
     }
 
-    console.log(player);
   };
 
   return (

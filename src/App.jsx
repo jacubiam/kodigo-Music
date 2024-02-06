@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import HomePage from "./pages/HomePage";
 import useToken from "./adapters/token";
 import TokenContext from "./context/TokenContext/TokenContext";
-import AlbumsContext from "./context/ArtistContext/AlbumsContext";
+import AlbumsContext from "./context/AlbumsContext/AlbumsContext";
 import Playlist from "./pages/Playlist";
 import NotFound from "./pages/NotFound";
 import PlayerContext from "./context/PlayerContex/PlayerContext";
