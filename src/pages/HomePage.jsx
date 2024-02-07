@@ -5,7 +5,7 @@ import AlbumList from '../components/HomePage/AlbumList/AlbumList';
 const HomePage = () => {
     return (
         <>
-            <header className='flex flex-wrap items-start justify-center'>
+            <header>
                 <HeaderBanner />
                 <SearchBar />
             </header>

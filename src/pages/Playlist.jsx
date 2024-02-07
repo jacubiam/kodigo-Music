@@ -7,7 +7,7 @@ const Playlist = () => {
 
   return (
     <>
-      <header className='flex flex-wrap items-start justify-center'>
+      <header>
         <HeaderBanner />
         <SearchBar />
       </header>

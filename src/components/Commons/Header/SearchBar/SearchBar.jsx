@@ -13,13 +13,18 @@ const SearchBar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        search(searchText, tokenID, setAlbums);
+        const text = searchText.trim().split(" ");
+        const textWords = text.map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        });
+        const textCleanWords = textWords.filter(word => word !== "");
+        search(textCleanWords.join(" "), tokenID, setAlbums);
         navigator('/');
     };
 
     return (
 
-        <div className="flex w-full mx-10 rounded bg-white max-w-screen-md mt-2">
+        <div className="flex w-full rounded bg-white max-w-screen-md mx-auto ">
             <input className=" w-full border-none bg-transparent px-4 py-1 text-gray-400 outline-none focus:outline-none "
                 type="search" name="search" placeholder="Search an artist..."
                 onChange={e => setSearchText(e.target.value)}
