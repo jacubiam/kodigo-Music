@@ -4,7 +4,7 @@ const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
 const CLIENT_SECRET = import.meta.env.VITE_CLIENT_SECRET;
 
 
-const useToken = () => {
+const useToken = (pulse) => {
     const [token, setToken] =useState("");
 
     useEffect(()=>{
@@ -23,7 +23,7 @@ const useToken = () => {
         };
 
         getToken();
-    },[]);
+    },[pulse]);
 
 
     return token;

@@ -11,9 +11,8 @@ import PlayerContext from "./context/PlayerContex/PlayerContext";
 
 
 const routes = createBrowserRouter([
-  { path: '/', element: <HomePage /> },
-  { path: '/album/:albumID', element: <Playlist /> },
-  { path: '*', element: <NotFound /> }
+  { path: '/', element: <HomePage />, errorElement: <NotFound /> },
+  { path: '/album/:albumID', element: <Playlist />, errorElement: <NotFound /> },
 ]);
 
 const queryClient = new QueryClient();
@@ -30,14 +29,15 @@ const playerInfo = {
 };
 
 function App() {
-  const tokenID = useToken();
+  const [pulse, setPulse] = useState(0);
+  const tokenID = useToken(pulse);
   const [albums, setAlbums] = useState([]);
   const [player, setPlayer] = useState(playerInfo);
 
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <TokenContext.Provider value={tokenID}>
+        <TokenContext.Provider value={{ tokenID, setPulse }}>
           <AlbumsContext.Provider value={{ albums, setAlbums }}>
             <PlayerContext.Provider value={{ player, setPlayer }}>
               <RouterProvider router={routes} />
